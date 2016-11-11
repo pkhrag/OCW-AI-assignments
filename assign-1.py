@@ -15,6 +15,7 @@ def count_pattern(pattern, list):
 
 x = [[1, 2], 1, 2, 3]
 y = ('+', ('expt', 'x', 2), ('expt', 'y', 2))
+z = (((1, 2), 3), (4, (5, 6)), 7, (8, 9, 10))
 
 
 def depth(exp, count):
@@ -27,3 +28,12 @@ def depth(exp, count):
     return dep
 
 # print(depth(y, 0))
+
+
+def tree_ref(tree, exp, ptr):
+    if ptr >= len(exp):
+        return tree
+    return tree_ref(tree[exp[ptr]], exp, ptr + 1)
+
+
+print(tree_ref(z, (0,0), 0))
