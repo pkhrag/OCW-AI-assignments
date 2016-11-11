@@ -36,4 +36,4 @@ def tree_ref(tree, exp, ptr):
     return tree_ref(tree[exp[ptr]], exp, ptr + 1)
 
 
-print(tree_ref(z, (0,0), 0))
+# print(tree_ref(z, (0,0), 0))
