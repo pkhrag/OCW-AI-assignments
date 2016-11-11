@@ -10,6 +10,4 @@ def fact(n):
 
 
 def count_pattern(pattern, list):
-    for x in list:
-        if pattern[0] is x:
-        	
+    return sum(1 for x in range(len(list)) if list[x:x + len(pattern)] == pattern)
